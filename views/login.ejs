@@ -1,12 +1,98 @@
 <%- include("./partials/header") %>
 
-<h1> LOGIN</h1>
+<!-- <h1> LOGIN</h1> -->
+	
+<!-- Firebase Package-->
+<script src= 
+"https://www.gstatic.com/firebasejs/5.8.5/firebase.js"> 
+</script> 
 
+<!-- Loads the login UI elements-->
+<script src= 
+"https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"> 
+</script> 
+<link type="text/css" rel="stylesheet" href= 
+"https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" /> 
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCJI3T75A-SwgQJhFIgYYbIgKSeHyNBk7E",
+    authDomain: "touristry-afe0a.firebaseapp.com",
+    projectId: "touristry-afe0a",
+    storageBucket: "touristry-afe0a.appspot.com",
+    messagingSenderId: "727769363319",
+    appId: "1:727769363319:web:b82e4450428d8234b46772",
+    measurementId: "G-C47GKYEDTB"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Yinka Enoch Adedokun">
+	<title>Login Page</title>
+</head>
+<body>
+	<!-- Main Content -->
+	<div class="container-fluid text-center" id="login1">
+		<!-- <div class="row main-content bg-success text-center"> -->
+			<!-- <div class="col-md-4 text-center company__info">
+				<span class="company__logo"><h2><span class="fa fa-android"></span></h2></span>
+				<h4 class="company_title">Login Here!</h4>
+			</div> -->
+			<div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+				<div class="container-fluid">
+					<div class="row">
+						<h2>Log In</h2>
+					</div>
+					<!-- <div class="row"> -->
+						<form action="/login" method="post" >
+							<div class="row">
+								<input type="text" name="username" id="username" class="form__input" placeholder="Username">
+							</div>
+							<div class="row">
+								<!-- <span class="fa fa-lock"></span> -->
+								<input type="password" name="password" id="password" class="form__input" placeholder="Password">
+							</div>
+							
+							<div class="row">
+                <button class="btn" type="submit"> Login </button>
+							</div>
+						</form>
+					</div>
+					<div class="row">
+					 <a href="#">Register Here</a>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</div>
+	
+<!-- </body>
 <form action="/login" method="post">
     <input type="text" name="username" placeholder="username">
     <input type="password" name="password" placeholder="password">
     <button> Login </button>
+    <button> Sign In using Gmail</button>
+    <p>Login or Register with:</p>
+    <a href="/auth/google" class="btn btn-danger"><span class="fa fa-google"></span> SignIn with Google</a> -->
 
-</form>
+<!-- </form> --> -->
+
 
 <%- include("./partials/footer") %>

@@ -1,17 +1,47 @@
 <%- include("../partials/header") %>
 
-<div class="container">
-  <header class="jumbotron"> 
-    <div class="container">
+ </div>
+<div class="container" >
+  <header class="jumbotron" id="mainbox"> 
+    <div class="container" >
         <h1> Welcome to Touristry</h1>
         <p>View out favourite tourist places</p>
         <p>
-          <a class="btn btn-primary btn-lg" href="\campgrounds\new"> Add New Hub</a>
+          <a class="btn btn-primary btn-lg" href="\campgrounds\new"> Share New Adventure</a>
         </p>
       </div>
   </header>
-  
-  <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+  <div class="container">
+      
+    <% campgrounds.forEach(function(campground){ %>
+
+        <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <!-- <div class="col-md-3 col-sm-6"> -->
+            
+      <div class="thumb-box">
+      
+      <a href="/campgrounds/<%= campground._id %>">
+        <img src="<%= campground.image %>">
+         <span class="overlay-box">
+        <!-- <span class="meta">Feb 20, 2019</span> -->
+        <span class="main-title"><%= campground.name %></span>
+       
+        <span class="description"><%= campground.description %></span>
+          </span>
+          <!-- <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">More Info</a> -->
+      <!-- </a> -->
+   
+    
+    </div>
+
+    
+   
+    <% }); %>
+</div>
+    </div>
+    </div>
+   
+  <!-- <div class="row text-center" style="display:flex; flex-wrap: wrap;">
      <% campgrounds.forEach(function(campground){ %>
          <div class="col-md-3 col-sm-6">
              <div class="thumbnail">
@@ -26,6 +56,6 @@
          </div>
      <% }); %>
  </div>
-</div>
+</div> -->
 
 <%- include("../partials/footer") %> 
